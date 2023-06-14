@@ -18,11 +18,11 @@ In the Gary Lam Wing Chun system, each move is assigned one of five elements of 
 
 ## Features
 ### Search for a Wing Chun Hand
-![Search1](https://github.com/rickythewriter/kung-fu-search/blob/readme/public/images/search1.png)
-![Search2](https://github.com/rickythewriter/kung-fu-search/blob/readme/public/images/search2.png)
+![Search1](https://github.com/rickythewriter/kung-fu-search/blob/master/public/images/search1.png)
+![Search2](https://github.com/rickythewriter/kung-fu-search/blob/master/public/images/search2.png)
 ### See or Hide List of Eighteen Wing Chun Hands
-![See](https://github.com/rickythewriter/kung-fu-search/blob/readme/public/images/see.png)
-![Hide](https://github.com/rickythewriter/kung-fu-search/blob/readme/public/images/hide.png)
+![See](https://github.com/rickythewriter/kung-fu-search/blob/master/public/images/see.png)
+![Hide](https://github.com/rickythewriter/kung-fu-search/blob/master/public/images/hide.png)
 
 ## Installation
 1. From the terminal, clone this repository
