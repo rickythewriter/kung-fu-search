@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import AllHands from './components/AllHands';
+import Search from './components/Search';
 
 function App() {
+
+  const [seeList, toggleSeeList] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1>Eighteen Hands of Wing Chun<br/>詠春十八手</h1>
+      <div id='table-container'>
+        <Search />
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={() => toggleSeeList(!seeList)}
         >
-          Learn React
+          {seeList ? "Hide List of Hands" : "See List of Hands"}
         </a>
-      </header>
+        {seeList && <AllHands />}
+      </div>
     </div>
   );
 }
