@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Eighteen Hands of Wing Chun 詠春十八手
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Goal: Build a Sample Search Algorithm for JSON Data
 
-## Available Scripts
+## What is Eighteen Hands of Wing Chun?
 
-In the project directory, you can run:
+In the Gary Lam Wing Chun system, each move is assigned one of five elements of the Chinese wuxing system. I have written each hand's jyutping (Cantonese romanization), English translation, and element onto a JSON file.
 
-### `npm start`
+## Technologies Used
+- React
+- HTML5
+- CSS3
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Concepts
+- Hamming Distance
+- Levenshtein Distance
+- `String.prototype.includes()`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+### Search for a Wing Chun Hand
+![Search1](https://github.com/rickythewriter/kung-fu-search/blob/readme/public/images/search1.png)
+![Search2](https://github.com/rickythewriter/kung-fu-search/blob/readme/public/images/search2.png)
+### See or Hide List of Eighteen Wing Chun Hands
+![See](https://github.com/rickythewriter/kung-fu-search/blob/readme/public/images/see.png)
+![Hide](https://github.com/rickythewriter/kung-fu-search/blob/readme/public/images/hide.png)
 
-### `npm test`
+## Installation
+1. From the terminal, clone this repository
+```
+git clone https://github.com/rickythewriter/kung-fu-search.git
+```
+2. Enter the containing directory; install dependencies
+```
+npm install
+```
+3. Run on localhost
+```
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Cool Code Snippets
 
-### `npm run build`
+The main functionality of the search is in the ability to assign each result item a metric of closeness to the search query. I chose a Hamming Distance as the main algorithm.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Note: The Levenshtein Distance did was not as good at indexing letters in sequence, since it also accounts for swapping.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Hamming Distance
+```
+function hammingDistance(query, string) {
+  let distance = 0;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  for (const idx in query) {
+    if (query[idx] !== string[idx]) distance++;
+  }
 
-### `npm run eject`
+  return distance;
+}
+```
+For a more user-friendly experience, the length in consideration was not the length of the longer string, but the length of the query string, because the query is more often a substring of the intended search.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Accounting for Sub-Strings
+```
+function calculateQueryDistance(query, string) {
+  /* Initialize output as Hamming distance between query and compared word */
+  let distance = hammingDistance(query, string);
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  /* If word includes query, shorten distance by number of characters in query*/
+  if (string.includes(query) && distance !== 0) {
+    distance -= query.length;
+  }
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  return distance;
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Let's say I am looking for the word, "butterfly sword", but I only type in "fly". I would shorten the distance by the number of letters in the query, to account for its inclusion in the result string.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Creator - Ricky Thang
+- [GitHub](https://github.com/rickythewriter)
+- [Portfolio](rickythang.com)
+- [LinkedIn](https://www.linkedin.com/in/ricky-thang-88307a100)
