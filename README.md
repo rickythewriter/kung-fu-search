@@ -18,10 +18,15 @@ In the Gary Lam Wing Chun system, each move is assigned one of five elements of 
 
 ## Features
 ### Search for a Wing Chun Hand
+
 ![Search1](https://github.com/rickythewriter/kung-fu-search/blob/master/public/images/search1.png)
+
 ![Search2](https://github.com/rickythewriter/kung-fu-search/blob/master/public/images/search2.png)
+
 ### See or Hide List of Eighteen Wing Chun Hands
+
 ![See](https://github.com/rickythewriter/kung-fu-search/blob/master/public/images/see.png)
+
 ![Hide](https://github.com/rickythewriter/kung-fu-search/blob/master/public/images/hide.png)
 
 ## Installation
@@ -64,7 +69,7 @@ function calculateQueryDistance(query, string) {
   /* Initialize output as Hamming distance between query and compared word */
   let distance = hammingDistance(query, string);
 
-  /* If word includes query, shorten distance by number of characters in query*/
+  /* If word includes query, shorten distance by number of characters in query */
   if (string.includes(query) && distance !== 0) {
     distance -= query.length;
   }
