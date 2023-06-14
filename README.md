@@ -47,7 +47,7 @@ npm start
 
 The main functionality of the search is in the ability to assign each result item a metric of closeness to the search query. I chose a Hamming Distance as the main algorithm.
 
-Note: The Levenshtein Distance did was not as good at indexing letters in sequence, since it also accounts for swapping.
+Note: The Levenshtein Distance was not as good at indexing letters in sequence, because it also accounts for swapping.
 
 ### Hamming Distance
 ```
