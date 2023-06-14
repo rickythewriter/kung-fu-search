@@ -1,0 +1,116 @@
+[
+    {
+        "id": 0,
+        "jyutping": "jat6 zi6 cung1 ceoi4" ,
+        "translation": "Vertical Punch" ,
+"        element": null 
+    },
+    {
+        "id": 1,
+        "jyutping": "taan1 sau2" ,
+        "translation": "spread-open hand" ,
+        "element": "wood" 
+    },
+    {
+        "id": 2,
+        "jyutping": "gam6 sau2" ,
+        "translation": "PRESS" ,
+        "element": "WATER" 
+    },
+    {
+        "id": 3,
+        "jyutping": "gaang1 sau2" ,
+        "translation": "PLOWING HAND" ,
+        "element": "wood" 
+    },
+    {
+        "id": 4,
+        "jyutping": "WU6 SAU2" ,
+        "translation": "PROTECTING HAND" ,
+        "element": "WATER" 
+    },
+    {
+        "id": 5,
+        "jyutping": "Teoi1" ,
+        "translation": "Push" ,
+        "element": "Wood" 
+    },
+    {
+        "id": 6,
+        "jyutping": "zyun3" ,
+        "translation": "change" ,
+        "element": "wood" 
+    },
+    {
+        "id": 7,
+        "jyutping": "Laap3 sau2" ,
+        "translation": "Grab" ,
+        "element": "Fire" 
+    },
+    {
+        "id": 8,
+        "jyutping": "PAAU1" ,
+        "translation": "throw" ,
+        "element": "wood" 
+    },
+    {
+        "id": 9,
+        "jyutping": "paak3 sau" ,
+        "translation": "SLAP/CLAP" ,
+        "element": "Fire" 
+    },
+    {
+        "id": 10,
+        "jyutping": "HYUN1 SAU2" ,
+        "translation": "Circle hands" ,
+        "element": "water" 
+    },
+    {
+        "id": 11,
+        "jyutping": "kwan2sau2" ,
+        "translation": null ,
+        "element": "Water" 
+    },
+    {
+        "id": 12,
+        "jyutping": "zoeng2" ,
+        "translation": "palm" ,
+        "element": "wood" 
+    },
+    {
+        "id": 13,
+        "jyutping": "Bong2 Sau2" ,
+        "translation": "Chicken Wing Arm" ,
+        "element": "water" 
+    },
+    {
+        "id": 14,
+        "jyutping": "DAN3SAU2" ,
+        "translation": "yank/bounce/jiggle" ,
+        "element": "WOOD" 
+    },
+    {
+        "id": 15,
+        "jyutping": "fuk6 sau2" ,
+        "translation": null ,
+        "element": "wateR" 
+    },
+    {
+        "id": 16,
+        "jyutping": "zat6 sau2" ,
+        "translation": "obstruct / stutter" ,
+        "element": "fire" 
+    },
+    {
+        "id": 17,
+        "jyutping": "biu1 sau2" ,
+        "translation": "darting hands" ,
+        "element": "FIRE" 
+    },
+    {
+        "id": 18,
+        "jyutping": "zam2sau2",
+        "translation": "pillow",
+        "element": "Fire"
+    }   
+]
