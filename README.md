@@ -4,7 +4,7 @@ Goal: Build a Sample Search Algorithm for JSON Data
 
 ## What is Eighteen Hands of Wing Chun?
 
-In the Gary Lam Wing Chun system, each move is assigned one of five elements of the Chinese wuxing system. I have written each hand's jyutping (Cantonese romanization), English translation, and element onto a JSON file.
+In the Gary Lam Wing Chun system, each move is assigned one of five elements of the Chinese wuxing system. I have written each hand's jyutping (Cantonese romanization), English translation, and element onto a JSON file, the content of which is imported into this React app, which uses the Hamming Distance to search for hands of interest and their elements.
 
 ## Technologies Used
 - React
