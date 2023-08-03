@@ -82,5 +82,5 @@ Let's say I am looking for the word, "butterfly sword", but I only type in "fly"
 
 ## Creator - Ricky Thang
 - [GitHub](https://github.com/rickythewriter)
-- [Portfolio](rickythang.com)
+- [Portfolio](https://www.rickythang.com)
 - [LinkedIn](https://www.linkedin.com/in/ricky-thang-88307a100)
