@@ -4,7 +4,7 @@ Goal: Build a Sample Search Algorithm for JSON Data
 
 ## What is Eighteen Hands of Wing Chun?
 
-In the Gary Lam Wing Chun system, each move is assigned one of five elements of the Chinese wuxing system. I have written each hand's jyutping (Cantonese romanization), English translation, and element onto a JSON file, the content of which is imported into this React app, which uses the Hamming Distance to search for hands of interest and their elements.
+In the Gary Lam Wing Chun system, each move is assigned one of five elements of the Chinese *wuxing* system. I have written each hand's jyutping (Cantonese romanization), English translation, and element onto a JSON file. This React app uses the Hamming Distance to search the JSON file contents for hands of interest and their elements.
 
 ## Technologies Used
 - React
@@ -63,6 +63,8 @@ function hammingDistance(query, string) {
 ```
 For a more user-friendly experience, the length in consideration was not the length of the longer string, but the length of the query string, because the query is more often a substring of the intended search.
 
+Let's say, I search for the word, "kwan". The distance between "kwan" and "kwan sau" would be 0, because "kwan"–the query string–is the string to which others are compared.
+
 ### Accounting for Sub-Strings
 ```
 function calculateQueryDistance(query, string) {
@@ -78,7 +80,7 @@ function calculateQueryDistance(query, string) {
 }
 ```
 
-Let's say I am looking for the word, "butterfly sword", but I only type in "fly". I would shorten the distance by the number of letters in the query, to account for its inclusion in the result string.
+Let's say I am looking for the word, "butterfly sword", but I only type in "fly". I would shorten the distance by the number of letters in the query, to account for its inclusion in the result string. Instead of the distance being 3, because "fly" is three letters from being "but", the distance would be 0, because "butterfly sword" contains the sub-string, "fly".
 
 ## Creator - Ricky Thang
 - [GitHub](https://github.com/rickythewriter)
